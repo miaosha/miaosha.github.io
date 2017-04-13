@@ -1,0 +1,34 @@
+body{
+	padding: 0;
+	margin: 0px;
+	font-size: 50px;
+	color: #3457ff;
+	text-align: center;
+}
+header{border: 1px solid #f00;
+	height: 100px;
+	margin: 1%;
+
+}
+aside{
+	border: 1px  solid #00f;
+	height: 500px;
+	width: 300px;
+	margin: 0;
+	float: left;
+}
+
+footer{
+	height: 120px;
+	border: 1px solid #4499FF;
+}
+main{
+	height: 500px;
+	width: 900px;
+	float: right;
+	border: 1px solid #4499FF;
+}
+section{
+	min-height: 500px;
+	margin: 10px;
+}
