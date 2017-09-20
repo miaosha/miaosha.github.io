@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#a{
+				width: 500px;
+				height: 350px;
+				margin: auto;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			
+		</div>
+		<script type="text/javascript">
+			var jp="1.jpeg|2.jpeg|3.jpeg|4.jpeg";
+			var jp=jp.split("|");
+			var A=document.getElementById("a");
+			var num=parseInt(Math.random()*4);
+			A.style.backgroundImage="url(img/"+jp[num]+")"
+		</script>
+	</body>
+</html>
