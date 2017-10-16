@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>打字效果</title>
+		<style type="text/css">
+		body{
+			background-color: black;
+		}
+		
+			h2{
+		    width: 400px;
+			height: 210px;
+			font-family: "楷体";
+			
+			right: 10px;
+			top: 90px;
+			line-height: 1.5em;
+			margin: auto;
+			text-indent: 2em;
+			color: azure;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>天冷了，有男票的抱男票，有女票的搂女票，而我就比较高端了，通过神经系统和体液会对身体各部分进行调节。下丘脑将分泌更多的促甲状腺激素释放激素促进垂体释放促甲状腺激素促进甲状腺分泌更多甲状腺激素，同时伴有肾上腺素的分泌增加和骨骼肌的战栗还有立毛肌和毛细血管的收缩，来抵御寒冷。</h2> 
+			
+			
+			
+	</body>
+	<script type="text/javascript">
+		var oh1=document.querySelector("h2");
+			typing(oh1,100);
+			function typing(wd,speed){
+				var owd=wd;
+				var str=owd.innerHTML;
+				var i=0;
+				owd.innerText=" ";
+				
+				var a=setInterval(function(){
+					if(i<str.length){
+						owd.innerText+=str[i];
+					}
+					else{
+						clearInterval(a);
+					}
+					i++;
+				},speed)
+			}
+		</script>
+		
+
+</html>
