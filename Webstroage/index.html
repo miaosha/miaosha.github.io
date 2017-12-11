@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: navajowhite;
+			}
+			.container{
+				width: 100%;
+				min-height: 100%;
+				
+			}
+			button{
+				background-color: #000;
+				color: #fff;
+			}
+			.text{
+				width: 80%;
+				min-height: 600px;
+				margin: 0 auto;
+			}
+			.text h2{
+				text-align: center;
+			}
+			.text p{
+				text-indent: 2em;
+				font-size: 15px;
+			}
+			[data-theme='blue']{
+				background-image: url(img/1.jpg);
+				background-size: 100%;
+				color: darkgoldenrod;
+				border: 4px solid #8C9C47;
+			}
+			[data-theme='red']{
+				background-image: url(img/2.jpg);
+				background-size: 100%;
+				color: #fff;
+				border: 4px solid #ECC60D;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<button id="blue">皮肤1</button>
+			<button id="red">皮肤2</button>
+			<div class="text">
+				<h2></h2>			     
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var oBlue=document.getElementById("blue");
+			var oRed=document.getElementById("red");
+			var oText=document.querySelector(".text");
+
+			var curTheme=localStorage.getItem("theme");
+			
+			if(curTheme!=null){
+				oText.dataset.theme=curTheme;
+			}
+			localStorage.clear();
+			oBlue.addEventListener("click",setTheme);
+			oRed.addEventListener("click",setTheme);
+			function setTheme(){
+				var target=event.target;
+				var id=target.id;
+				console.log(id);
+				oText.dataset.theme=id;
+				localStorage.setItem("theme",id);
+			}
+		</script>
+	</body>
+</html>
