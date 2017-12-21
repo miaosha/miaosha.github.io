@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background-image: url(img/8e86f966d895b24863af1bad5ca303c43e8dab3b.jpg) ;
+			   background-size: cover;
+				
+			}
+			.menuContainer{
+				border: 4px dashed white;
+				width: 420px;
+				height: 200px;
+				padding: 3px 2px 2px 10px;				
+				padding: 10px;
+				position: relative;
+				margin-left: 35%;
+				margin-top: 10%;
+
+			}
+			.menu{
+				overflow:hidden;
+				position: absolute;
+			
+
+			}
+			h1{
+				color: white;
+			}
+			a{
+				display: block;
+				font-size: 12px;
+				line-height: 18px;
+				text-decoration: none;
+				color: white;
+				font-family: arial;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menuContainer">
+				<h1>最强脑洞封神演义《武庚纪》</h1>
+			<div class="menu">
+				
+				<a>【故事简介】纣王断然拒绝“天”的神谕，将之投入火炬里烧毁，公然发布反抗神族之宣言</a>
+				<a>神族之主——“天”为此勃然大怒，带领神族的天间六部与周国军队来讨伐大商国。</a>
+				<a>纣王与远古神兽不死鸟分享血与肉体，得到了原本属于神族才拥有的原始界神力。</a>
+				<a>可惜还是不敌“天”之无色界神力，最后功败垂成。</a>
+				<a>纣王之子武庚得到母亲妲己之帮助，逃过神族的追捕。</a>
+				<a>后来沦落为采矿工厂的奴隶， 武庚从不赞同父亲的做法到体验到神族所带来的不平等待遇，立志颠覆神族。</a>
+
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+			var n=2,
+				oMenu=document.querySelector(".menu"),
+				oMenuItem=document.querySelectorAll(".menu a"),
+				runHeight=oMenuItem[0].offsetHeight*n,
+				runFlag=true;
+			
+			oMenu.style.height=runHeight+"px";
+			oMenu.innerHTML+=oMenu.innerHTML;
+			
+			oMenu.addEventListener("mouseover",function(){runFlag=false});
+			oMenu.addEventListener("mouseout",function(){runFlag=true});
+			(function(){
+				var stop=oMenu.scrollTop%runHeight==0&&!runFlag;
+				if(!stop){
+					parseInt(oMenu.scrollTop)==parseInt(oMenu.scrollHeight/2)?oMenu.scrollTop=0:oMenu.scrollTop++;
+				}
+				setTimeout(arguments.callee,oMenu.scrollTop%runHeight==0?1000:10);
+			})();
+            
+		</script>
+	</body>
+</html>
+
+</html>
